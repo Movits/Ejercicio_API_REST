@@ -10,5 +10,9 @@
 7. app.listen para iniciar servidor
 8. app.use para usar una ruta por defecto
     - res.send para enviar info a la pagina
-9. app.get("/1") para def una otra ruta
+9. app.get("/...") para def una otra ruta
+10. ?param=1&param2=qwerty&param3=false
+11. npm i cors
+12. "start": "node index.js" para el hosting
 
+npm run dev
