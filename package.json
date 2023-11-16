@@ -2,7 +2,7 @@
   "type": "module",
   "name": "ejercicio_api_rest",
   "version": "1.0.0",
-  "description": "",
+  "description": "1. npm init -y\r 2. npm i express\r 3. npm i -D nodemon\r 4. git ignore\r     - ignorando node_modules\r 5. en package.json\r     - \"dev\": \"nodemon index.js\"\r     - \"type\": \"module\"\r 6. inicializar express\r 7. app.listen para iniciar servidor\r 8. app.use para usar una ruta por defecto\r     - res.send para enviar info a la pagina\r 9. app.get(\"/...\") para def una otra ruta\r 10. ?param=1&param2=qwerty&param3=false\r 11. npm i cors\r 12. \"start\": \"node index.js\" para el hosting",
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,7 +14,8 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "mysql2": "^3.6.3"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
