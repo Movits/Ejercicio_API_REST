@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import pool from "./conexionDB.js";
 
 const app = express();
 
