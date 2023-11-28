@@ -13,8 +13,10 @@ app.get("", async (req,res)=>{
         console.log(resultado);
         res.json(resultado/* [0][0] */)
     } catch (error) {
-        console.log(error);
-        res.status(500).json({error:"error de servidor"})
+        res.status(500).json({
+            informe:"error de servidor",
+            error:error
+        })
     }
 });
 
