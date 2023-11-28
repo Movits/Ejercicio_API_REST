@@ -25,8 +25,7 @@ const pool = createPool({
     database : configuracion.NAME,
 });
 
-await pool.query(CREAR_TABLA);
-/* haciendo el pool otra vez */
+pool.query(CREAR_TABLA);
 
 console.log("conexion exitosa");
 
