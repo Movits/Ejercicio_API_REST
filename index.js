@@ -8,9 +8,9 @@ app.use(express.json());
 app.use(cors());
 
 app.get("", async (req,res)=>{
-    const resultado = await pool.query("SELECT 1+2")
+    const [resultado] = await pool.query("SELECT * FROM USUARIOS")
     console.log(resultado);
-    res.json({atributo: "<h1> Hola! </h1>"})
+    res.json(resultado/* [0][0] */)
 });
 
 app.get("/api", (req,res)=>{

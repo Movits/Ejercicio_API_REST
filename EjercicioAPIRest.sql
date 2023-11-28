@@ -13,3 +13,8 @@ CREATE TABLE usuarios (
 
 DESCRIBE usuarios;
 SELECT * FROM usuarios;
+
+INSERT INTO usuarios (nombre, edad, email, contrasena) VALUES ('qwerty', 123, 'qwerty@123.com', 'qwerty123');
+INSERT INTO usuarios (nombre, edad, email, contrasena) VALUES ('asdfg', 456, 'asdfg@456.com', 'asdfg456');
+
+SELECT * FROM usuarios;
