@@ -8,9 +8,14 @@ app.use(express.json());
 app.use(cors());
 
 app.get("", async (req,res)=>{
-    const [resultado] = await pool.query("SELECT * FROM USUARIOS")
-    console.log(resultado);
-    res.json(resultado/* [0][0] */)
+    try {
+        const [resultado] = await pool.query("SELECT * FROM USUARIOS")
+        console.log(resultado);
+        res.json(resultado/* [0][0] */)
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({error:"error de servidor"})
+    }
 });
 
 app.get("/api/:id", async (req,res)=>{
