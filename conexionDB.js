@@ -26,6 +26,7 @@ const pool = createPool({
 });
 
 await pool.query(CREAR_TABLA);
+/* haciendo el pool otra vez */
 
 console.log("conexion exitosa");
 
