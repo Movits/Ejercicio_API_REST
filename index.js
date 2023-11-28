@@ -7,7 +7,9 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.get("", (req,res)=>{
+app.get("", async (req,res)=>{
+    const resultado = await pool.query("SELECT 1+2")
+    console.log(resultado);
     res.json({atributo: "<h1> Hola! </h1>"})
 });
 
