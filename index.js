@@ -13,6 +13,12 @@ app.get("", async (req,res)=>{
     res.json(resultado/* [0][0] */)
 });
 
+app.get("/api/:id", async (req,res)=>{
+    const [resultado] = await pool.query("SELECT * FROM USUARIOS WHERE dni = ?", req.params.id);
+    console.log(resultado);
+    res.json(resultado/* [0][0] */)
+});
+
 app.get("/api", (req,res)=>{
     console.log(req.query);
     res.send(`<h1> Hola 2! ${req.query.param2} </h1>`)
