@@ -8,7 +8,7 @@ console.log(configuracion.PASSWORD);
 console.log(configuracion.NAME); */
 
 const CREAR_TABLA = `
-    CREATE TABLE IF NOT EXISTS usuarios (
+    CREATE TABLE IF NOT EXISTS USUARIOS (
         dni INT AUTO_INCREMENT PRIMARY KEY,
         nombre VARCHAR(45) NOT NULL,
         edad INT NOT NULL,
@@ -25,7 +25,7 @@ const pool = createPool({
     database : configuracion.NAME,
 });
 
-pool.query(CREAR_TABLA);
+await pool.query(CREAR_TABLA);
 
 console.log("conexion exitosa");
 
